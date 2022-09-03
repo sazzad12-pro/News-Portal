@@ -1,0 +1,7 @@
+ul:hover {
+  background-color: hsla(224, 94%, 49%, 0.554);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
