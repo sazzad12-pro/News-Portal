@@ -21,7 +21,24 @@ const singleCategory = async (id) => {
   const url = `https://openapi.programming-hero.com/api/news/category/${id}`;
   const res = await fetch(url);
   const data = await res.json();
-  console.log(data.data);
+  singleNewsDisplay(data.data);
+};
+
+const singleNewsDisplay = (oneNews) => {
+  const perNewsFiled = document.getElementById("single-news");
+  oneNews.forEach((news) => {
+    const {
+      author,
+      details,
+      image_url,
+      others_info,
+      rating,
+      title,
+      total_view,
+      _id,
+    } = news;
+    const makediv = document.createElement("div");
+  });
 };
 
 newsCategory();
