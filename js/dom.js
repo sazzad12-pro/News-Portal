@@ -113,11 +113,13 @@ const personShowModal = (user) => {
   console.log(user);
   const modalName = document.getElementById("staticBackdropLabel");
   modalName.innerText = user.title;
+
   const modalImg = document.getElementById("modal-img");
   modalImg.innerHTML = ``;
   const makeDiv = document.createElement("div");
   makeDiv.innerHTML = `
   <img src="${user.thumbnail_url}" alt="">
+  <p>${user.details}</p>
   `;
   modalImg.appendChild(makeDiv);
 };
