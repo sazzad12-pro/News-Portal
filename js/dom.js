@@ -26,6 +26,7 @@ const singleCategory = async (id) => {
 };
 
 const singleNewsDisplay = (oneNews) => {
+  oneNews.sort((a, b) => b.total_view - a.total_view);
   const newsNotFound = document.getElementById("found-data");
   if (oneNews.length === 0) {
     newsNotFound.classList.remove("d-none");
@@ -58,19 +59,21 @@ const singleNewsDisplay = (oneNews) => {
       <div class="card-body">
         <h5 class="card-title">${title}</h5>
         <p class="card-text">${details.slice(0, 300)}...</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        
       </div>
       <div class="d-flex justify-content-between">
           <div class="d-flex">
              <img src="${author.img}" class="img-1" alt="...">
              <div class="ms-3">
-             <p class="mb-0">${author.name}</p>
+             <p class="mb-0">${
+               author.name ? author.name : "no data available"
+             }</p>
              <p>${author.published_date}</p>
              </div>
            </div>
           <div>
            <p> <i class="fa-regular fa-eye"></i>${
-             total_view ? total_view : "no reached here"
+             total_view ? total_view : "no data available"
            }</p>       
                   
           </div>
