@@ -27,11 +27,18 @@ const singleCategory = async (id) => {
 
 const singleNewsDisplay = (oneNews) => {
   oneNews.sort((a, b) => b.total_view - a.total_view);
+
+  const item = oneNews.length;
+  const itemValue = document.getElementById("item");
+  itemValue.innerText = item;
   const newsNotFound = document.getElementById("found-data");
+  const itemFiled = document.getElementById("item-container");
   if (oneNews.length === 0) {
     newsNotFound.classList.remove("d-none");
+    itemFiled.classList.add("d-none");
   } else {
     newsNotFound.classList.add("d-none");
+    itemFiled.classList.remove("d-none");
   }
 
   const perNewsFiled = document.getElementById("single-news");
@@ -50,7 +57,7 @@ const singleNewsDisplay = (oneNews) => {
     } = news;
     const makediv = document.createElement("div");
     makediv.innerHTML = `
-    <div class="card mb-3 container" style="max-width: auto;">
+    <div class="card mb-3 container mt-5" style="max-width: auto;">
   <div class="row g-0">
     <div class="col-md-4">
       <img src="${image_url}" class="img-fluid rounded-start" alt="...">
