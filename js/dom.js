@@ -141,4 +141,6 @@ const toggleSpiner = (isloder) => {
   }
 };
 
+const blogSection = () => (window.location.href = "question.html");
+
 newsCategory();

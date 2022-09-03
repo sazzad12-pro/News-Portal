@@ -1,4 +1,4 @@
-ul:hover {
+ul li:hover {
   background-color: hsla(224, 94%, 49%, 0.554);
   color: white;
   padding: 5px;
