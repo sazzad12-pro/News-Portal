@@ -6,7 +6,9 @@ const newsCategory = async () => {
 };
 
 const newsDisplay = (categories) => {
-  console.log(categories);
+  categories.forEach((category) => {
+    console.log(category.category_name);
+  });
 };
 
 newsCategory();
