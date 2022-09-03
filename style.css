@@ -5,3 +5,8 @@ ul:hover {
   border-radius: 5px;
   cursor: pointer;
 }
+.img-1 {
+  width: 80px;
+  margin-left: 10px;
+  border-radius: 50px;
+}
