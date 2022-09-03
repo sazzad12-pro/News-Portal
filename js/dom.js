@@ -68,7 +68,11 @@ const singleNewsDisplay = (oneNews) => {
              <p class="mb-0">${
                author.name ? author.name : "no data available"
              }</p>
-             <p>${author.published_date}</p>
+             <p>${
+               author.published_date
+                 ? author.published_date
+                 : "no data avilable"
+             }</p>
              </div>
            </div>
           <div>

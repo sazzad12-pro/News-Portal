@@ -10,3 +10,8 @@ ul:hover {
   margin-left: 10px;
   border-radius: 50px;
 }
+.fa-solid:hover {
+  cursor: pointer;
+  background-color: blueviolet;
+  padding: 10px;
+}
